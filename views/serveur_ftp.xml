@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vue formulaire -->
+    <record id="view_form_serveur_ftp" model="ir.ui.view">
+        <field name="name">serveur.ftp.form</field>
+        <field name="model">serveur.ftp</field>
+        <field name="arch" type="xml">
+            <form string="Serveur FTP">
+            <header>
+                <button name="action_envoyer" type="object" string="Envoyer" class="btn-primary" />
+            </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="ftp_address"/>
+                        <field name="ftp_user"/>
+                        <field name="ftp_password" password="True"/>
+                        <field name="local_path"/>
+                        <field name="destinataire_email"/>
+                        <field name="interval_number"/>
+                        <field name="interval_type"/>
+                        <field name="upload_status" readonly="1"/>
+                        <field name="cron_id" readonly="1"/>
+                    </group>
+                    <footer>
+                        <button name="action_envoyer" type="object" string="Envoyer" class="btn btn-primary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vue liste -->
+    <record id="view_serveur_ftp_list" model="ir.ui.view">
+        <field name="name">serveur.ftp.list</field>
+        <field name="model">serveur.ftp</field>
+        <field name="arch" type="xml">
+            <tree string="Serveurs FTP">
+                <field name="name"/>
+                <field name="ftp_address"/>
+                <field name="local_path"/>
+                <field name="destinataire_email"/>
+                <field name="upload_status"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action de fenêtre -->
+    <record id="action_serveur_ftp" model="ir.actions.act_window">
+        <field name="name">Serveurs FTP</field>
+        <field name="res_model">serveur.ftp</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu principal -->
+    <menuitem id="menu_serveur_ftp_root"
+              name="FTP Manager"
+              sequence="10"
+              web_icon="serveur_ftp_17,static/description/icon.png"/>
+
+    <!-- Menu secondaire -->
+    <menuitem id="menu_serveur_ftp"
+              name="Serveurs FTP"
+              parent="menu_serveur_ftp_root"
+              action="action_serveur_ftp"
+              sequence="10"/>
+</odoo>

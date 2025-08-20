@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="serveur-ftp.list">
+      <field name="name">serveur-ftp list</field>
+      <field name="model">serveur-ftp.serveur-ftp</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="serveur-ftp.action_window">
+      <field name="name">serveur-ftp window</field>
+      <field name="res_model">serveur-ftp.serveur-ftp</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="serveur-ftp.action_server">
+      <field name="name">serveur-ftp server</field>
+      <field name="model_id" ref="model_serveur-ftp_serveur-ftp"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="serveur-ftp" id="serveur-ftp.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="serveur-ftp.menu_1" parent="serveur-ftp.menu_root"/>
+    <menuitem name="Menu 2" id="serveur-ftp.menu_2" parent="serveur-ftp.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="serveur-ftp.menu_1_list" parent="serveur-ftp.menu_1"
+              action="serveur-ftp.action_window"/>
+    <menuitem name="Server to list" id="serveur-ftp" parent="serveur-ftp.menu_2"
+              action="serveur-ftp.action_server"/>
+-->
+  </data>
+</odoo>

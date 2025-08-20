@@ -1,0 +1,12 @@
+<odoo>
+    <record id="ir_cron_envoyer_fichier_ftp" model="ir.cron">
+        <field name="name">Envoyer fichiers FTP automatiquement</field>
+        <field name="model_id" ref="model_serveur_ftp"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_envoyer_fichier()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="active">True</field>
+    </record>
+</odoo>
