@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <!-- Règle de contrôle d'accès pour le modèle serveur.ftp -->
+        <record id="model_serveur_ftp_access" model="ir.model.access">
+            <field name="name">serveur.ftp access</field>
+            <field name="model_id" ref="model_serveur_ftp"/> <!-- Assurez-vous que cela correspond à votre modèle -->
+            <field name="group_id" ref="base.group_user"/> <!-- Ou un groupe spécifique -->
+            <field name="perm_read" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+    </data>
+</odoo>

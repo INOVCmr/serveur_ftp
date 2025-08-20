@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>README - FTP Manager</title>
+    <style>
+        /* Style global */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f9f9fb;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Titres */
+        h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Paragraphes */
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        /* Listes */
+        ol, ul {
+            margin: 10px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Bloc code */
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        /* Images */
+        img {
+            display: block;
+            margin: 15px auto;
+            max-width: 90%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Encadré spécial pour auteur */
+        .author-box {
+            margin-top: 30px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-left: 5px solid #27ae60;
+            border-radius: 8px;
+        }
+
+        /* Liens */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h2>I. Nom du module</h2>
+        <p><strong>FTP Manager</strong></p>
+
+        <h2>II. Description</h2>
+        <p>
+            À partir de ce module, il est possible d'envoyer à un serveur FTP un fichier situé dans un répertoire donné par l'utilisateur de façon répétitive en fonction d'une période définie.
+            L'utilisateur doit remplir le formulaire avec :
+        </p>
+        <ul>
+            <li>Nom du fichier sur le serveur FTP</li>
+            <li>Adresse du serveur FTP</li>
+            <li>Nom d’utilisateur et mot de passe FTP</li>
+            <li>Chemin local du fichier (répertoire + extension)</li>
+            <li>Email de confirmation (succès ou échec)</li>
+            <li>Nombre d’intervalles</li>
+            <li>Type d’intervalle (minutes, heures, jours)</li>
+        </ul>
+        <p>Le champ <em>Statut d’upload</em> affiche l’état du fichier (en attente, succès, échec).  
+        Le champ <em>Tâche planifiée liée</em> affiche le cron associé.</p>
+
+        <h2>III. Fonctionnalités</h2>
+        <ul>
+            <li>✅ Envoi d’un fichier dans un serveur FTP</li>
+            <li>✅ Notification email en cas de succès ou d’échec</li>
+            <li>✅ Planification automatique via cron avec notification</li>
+        </ul>
+
+        <h2>IV. Installation</h2>
+        <ol>
+            <li>Copier le module dans le répertoire <code>addons</code> de votre Odoo</li>
+            <li>Mettre à jour la liste des applications</li>
+            <li>Installer le module <strong>serveur_ftp</strong></li>
+        </ol>
+
+        <h2>V. Configuration</h2>
+        <p>Votre Odoo doit avoir une configuration SMTP correcte pour envoyer des mails.</p>
+        <p><strong>Exemple de configuration SMTP :</strong></p>
+        <ol>
+            <li>Aller dans <b>Paramètres</b> puis activer le mode développeur</li>
+            <li>Cliquer sur <b>Technique > Serveurs de messagerie sortants</b></li>
+            <li>Cliquer sur <b>Nouveau</b> et renseigner vos infos SMTP</li>
+        </ol>
+        <img src="index.files/index1970.png" alt="Configuration SMTP">
+
+        <h2>VI. Captures d’écran</h2>
+        <p>Affichage du module après activation :</p>
+        <img src="index.files/index2038.png" alt="Activation du module">
+        <p>Vue liste : Cliquer sur <b>Nouveau</b> pour remplir le formulaire</p>
+        <img src="index.files/index2126.png" alt="Vue liste">
+        <p>Vue formulaire : Cliquer sur <b>Envoyer</b> après avoir rempli le formulaire</p>
+        <img src="index.files/index2210.png" alt="Vue formulaire">
+
+        <h2>VII. Auteur</h2>
+        <div class="author-box">
+            <ul>
+                <li>Développé par : <strong>INOV CAMEROON</strong></li>
+                <li>Contact : <a href="https://www.inov.cm" target="_blank">https://www.inov.cm</a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
